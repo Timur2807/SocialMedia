@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="{% static 'registration/css/base.css' %}">
+</head>
+<body>
+  <h1>Приветствую тебя {{ user.username }}</h1>
+  
+  <div>
+    <form action="{% url 'registration:logout_user' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Выйти</button>
+    </form>
+  </div>
+</body>
+</html>
