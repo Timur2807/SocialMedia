@@ -38,7 +38,7 @@ button, a {
     border-radius: 10px;
     color: white;
     transition: .2s linear;
-    background:#6C5FBC;
+    background: #f18c05;
     position: relative;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@ button, a {
 }
 
 button:hover, a:hover {
-    box-shadow: 2px 2px white, 4px 4px #FC63B5;
+    box-shadow: 2px 2px white, 4px 4px #05000c;
     top: -4px;
     left: -4px;
 }
@@ -125,15 +125,6 @@ form  label {
     transition: transform 120ms ease-in;
     font-size: 14px;
     text-align: left;
-}
-
-form p label {
-    white-space: nowrap;
-    transition: transform 120ms ease-in;
-    font-size: 14px;
-    text-align: left;
-    font-family: 'Lucida Grande', Arial, sans-serif;
-    color: #0a0000;
 }
 
 p input {

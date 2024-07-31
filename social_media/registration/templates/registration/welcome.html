@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome</title>
-  <link rel="stylesheet" href="{% static 'registration/css/base.css' %}">
-</head>
-<body>
-  <h1>Приветствую тебя {{ user.username }}</h1>
-  
-  <div>
-    <form action="{% url 'registration:logout_user' %}" method="post">
-      {% csrf_token %}
-      <button type="submit">Выйти</button>
-    </form>
+{% extends 'registration/base.html' %}
+
+{% block title %} Ананасы {% endblock %}
+
+{% block main %}
+{% include 'registration/menu.html' %}
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-12 col-md-8 sidenav pt-1">
+      <div class="bd-example">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block w-100 rounded" src="{{ MEDIA_URL }}static/image/ananas.jpg" alt="First slide">
+              <div class="carousel-caption d-none d-md-block text-shadow font-weight-bolder">
+                <h1>Любишь ананасы?</h1>
+                <p>Тогда стань одним из них или их другом!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
   </div>
-</body>
-</html>
+</div>
+{% endblock %}
