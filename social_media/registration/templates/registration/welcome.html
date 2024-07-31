@@ -1,4 +1,5 @@
 {% extends 'registration/base.html' %}
+{% load static %}
 
 {% block title %} Ананасы {% endblock %}
 
@@ -10,7 +11,7 @@
       <div class="bd-example">
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block w-100 rounded" src="{{ MEDIA_URL }}static/image/ananas.jpg" alt="First slide">
+              <img class="d-block w-100 rounded" src="{% static 'image/pineapples.jpg' %}" alt="First slide">
               <div class="carousel-caption d-none d-md-block text-shadow font-weight-bolder">
                 <h1>Любишь ананасы?</h1>
                 <p>Тогда стань одним из них или их другом!</p>
